@@ -1,0 +1,18 @@
+:root {
+  --theme-primary-100: #d4b2a6;
+  --theme-primary-200: #c6998b;
+  --theme-primary-300: #ad7e73;
+  --theme-white-100: #fcfcfc;
+  --theme-white-200: #f7f9fb;
+  --theme-gray: #bbbbbb;
+  --theme-black: #292b2c;
+  --theme-text-color: #222835;
+}
+$theme-primary-100: var(--theme-primary-100);
+$theme-primary-200: var(--theme-primary-200);
+$theme-primary-300: var(--theme-primary-300);
+$theme-white-100: var(--theme-white-100);
+$theme-white-200: var(--theme-white-200);
+$theme-gray: var(--theme-gray);
+$theme-black: var(--theme-black);
+$theme-text-color: var(--theme-text-color);

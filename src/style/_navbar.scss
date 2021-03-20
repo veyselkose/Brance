@@ -1,0 +1,101 @@
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  .container {
+    display: flex;
+    align-items: center;
+    .navbar-brand {
+      display: flex;
+      text-decoration: none;
+      font-size: 24px;
+      transition: 200ms opacity;
+      &:hover {
+        opacity: 0.7;
+      }
+      &:active {
+        opacity: 0.2;
+      }
+      .title {
+        font-weight: 500 !important;
+        margin-left: 5px;
+      }
+      color: $theme-primary-200;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .navbar-collapse {
+      margin-left: auto;
+
+      .navbar-nav {
+        display: flex;
+        list-style: none;
+        .nav-item {
+          margin-left: 15px;
+          .nav-link {
+            display: block;
+            text-decoration: none;
+            font-size: 17px;
+            color: $theme-black;
+            padding: 0.5rem 1rem;
+            transition: 200ms color;
+            &.active {
+              color: $theme-primary-200;
+              font-weight: 500;
+            }
+            &:hover {
+              color: $theme-primary-200;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    .container {
+      .navbar-brand {
+        align-items: center;
+      }
+      .menu-icon {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        outline: none;
+      }
+      .open {
+        transform: translateX(0%) !important;
+      }
+      .navbar-collapse {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: calc(100vh - 47.344px);
+        background-color: #fff;
+        transform: translateX(150%);
+        transition: 300ms transform;
+        margin-top: 58px;
+        .navbar-nav {
+          flex-direction: column;
+          .nav-item {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            .active {
+              background-color: #c6998b41;
+              font-weight: 700;
+            }
+            margin: 10px 15px;
+            .nav-link {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
