@@ -1,0 +1,45 @@
+@import "variables";
+.heroSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 0;
+    .title{
+        font-weight: 500;
+        font-family: $font-family-montserrat;
+        font-size: 30px;
+        span{
+            font-weight: 800;
+            color: $theme-primary-300;
+        }
+    }
+    .desc{
+        font-family: $font-family-montserrat;
+        margin-top: 30px;
+        // max-width: 800px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 35px;
+        white-space: pre-line;
+        &.width700{
+            max-width: 700px;
+        }
+        &.width800{
+            max-width: 800px;
+        }
+        &.widthFull{
+            max-width: 100%;
+        }
+    }
+}
+@media screen and (max-width:768px)
+{
+    .heroSection{
+        padding: 50px 0;
+    }
+    .desc{
+        white-space: inherit !important;
+    }
+}

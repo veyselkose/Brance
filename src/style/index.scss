@@ -6,11 +6,14 @@
   font-family: "Segoe UI", sans-serif;
   //   font-family: 'Montserrat', sans-serif;
 }
+@import "variables";
+@import "layout";
 
 body {
   -webkit-tap-highlight-color: transparent;
+  color: $theme-black;
 }
 
-@import "variables";
-@import "layout";
-@import "navbar";
+
+
+

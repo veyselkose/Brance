@@ -1,0 +1,51 @@
+@import "variables";
+.btn {
+  height: 50px;
+  width: 170px;
+  border: 1px solid $theme-primary-200;
+  background-color: transparent;
+  border-radius: 90rem;
+  outline: none;
+  font-size: 18px;
+  transition: 300ms all;
+}
+.btnOutline {
+  @extend .btn;
+  color: $theme-primary-300;
+  &:hover {
+    background-color: $theme-primary-200;
+    color: #fff;
+  }
+}
+.btnFill {
+  @extend .btn;
+  background-color: $theme-primary-200;
+  color: #fff;
+  font-weight: 500;
+  &:hover {
+    background-color: transparent;
+    color: $theme-primary-200;
+  }
+}
+
+.circle{
+    @extend .btn;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    color: $theme-primary-300;
+    &:hover {
+        background-color:  $theme-primary-200;
+        color: #fff;
+      }
+}
+.sharp{
+    @extend .btn;
+    border-radius: 0;
+    color: #fff;
+    background-color: $theme-primary-300;
+    &:hover {
+        background-color: transparent;
+        color: $theme-primary-200;
+      }
+}

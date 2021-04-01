@@ -3,19 +3,25 @@ import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Blog from "./components/pages/Blog";
 import About from "./components/pages/About";
-import Portfolio from "./components/pages/Portfolio";
+import PortfolioTwo from "./components/pages/PortfolioTwo";
+import PortfolioThree from "./components/pages/PortfolioThree";
+import PortfolioFour from "./components/pages/PortfolioFour";
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 function App() {
   return (
     <Router>
       <Navbar/>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/portfolio" component={Portfolio} />
         <Route path="/about" component={About} />
+        <Route path="/portfolio-two" component={PortfolioTwo} />
+        <Route path="/portfolio-three" component={PortfolioThree} />
+        <Route path="/portfolio-four" component={PortfolioFour} />
         <Route path="/blog" component={Blog} />
+        <Route path="/contact" component={Contact} />
       </Switch>
+      <Footer/>
     </Router>
   );
 }

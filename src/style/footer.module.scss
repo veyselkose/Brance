@@ -1,0 +1,48 @@
+@import "variables";
+.footer {
+  background-color: #eff1f4;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .footerRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        font-family: $font-family-montserrat;
+        font-size: 18px;
+        font-weight: 300;
+        color: $theme-black;
+    }
+    .icons {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg{
+         
+         &:not(:first-child){
+            margin-left: 20px;
+         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:768px)
+{
+    .footer{
+        .footerRow{
+            flex-direction: column;
+            span{
+                text-align: center;
+            }
+            .icons{
+              width: 100%;
+              margin-top: 30px;
+              justify-content: space-evenly;
+            }
+        }
+    }
+}

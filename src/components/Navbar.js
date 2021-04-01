@@ -1,48 +1,118 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import styles from "../style/navbar.module.scss";
 import Logo from "./Logo";
+
 function Navbar() {
   const [Click, setClick] = useState(false);
+  const menuclose = () => setClick(false);
   const handleClick = () => setClick(!Click);
+  const [Dropdown, setDropdown] = useState(false);
   return (
-    <nav className="navbar">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
+    <nav className={styles.navbar}>
+      <div className={`container ${styles.container}`}>
+        <Link className={styles.brand} to="/" onClick={menuclose}>
           <Logo />
-          <h3 className="title">Brance</h3>
+          <h3 className={styles.title}> Brance </h3>
         </Link>
-        <button className="menu-icon" onClick={handleClick}>
+        <button className={styles.menuIcon} onClick={handleClick}>
           {Click ? <FaTimes size={24} /> : <FaBars size={24} />}
         </button>
-        <div className={Click ? "navbar-collapse open" : "navbar-collapse"}>
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <NavLink className="nav-link" exact to="/" onClick={handleClick}>
+        <div
+          className={
+            Click ? `${styles.collapse} ${styles.open}` : styles.collapse
+          }
+        >
+          <ul className={styles.nav}>
+            <li className={styles.item}>
+              <NavLink
+                className={styles.link}
+                activeClassName={styles.active}
+                exact
+                to="/"
+                onClick={menuclose}
+              >
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/about" onClick={handleClick}>
+            <li className={styles.item}>
+              <NavLink
+                className={styles.link}
+                activeClassName={styles.active}
+                to="/about"
+                onClick={menuclose}
+              >
                 About
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink
-                className="nav-link"
-                to="portfolio"
-                onClick={handleClick}
+            <li
+              className={
+                Dropdown ? `${styles.item} ${styles.collapsed}` : styles.item
+              }
+              onClick={() => setDropdown(!Dropdown)}
+            >
+              <Link
+                className={styles.link}
+                style={{ display: "flex", alignItems: "center" }}
+                to=""
               >
                 Portfolio
-              </NavLink>
+                <IoIosArrowDown
+                  style={{ marginLeft: "10px", marginTop: "px" }}
+                />
+              </Link>
+              <ul className={styles.dropdown}>
+                <li className={styles.dropdownItem}>
+                  <NavLink
+                    className={styles.dropdownLink}
+                    activeClassName={styles.active}
+                    to="portfolio-two"
+                    onClick={menuclose}
+                  >
+                    Column Two
+                  </NavLink>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <NavLink
+                    activeClassName={styles.active}
+                    className={styles.dropdownLink}
+                    to="portfolio-three"
+                    onClick={menuclose}
+                  >
+                    Column Three
+                  </NavLink>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <NavLink
+                    activeClassName={styles.active}
+                    className={styles.dropdownLink}
+                    to="portfolio-four"
+                    onClick={menuclose}
+                  >
+                    Column Four
+                  </NavLink>
+                </li>
+              </ul>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/blog" onClick={handleClick}>
+            <li className={styles.item}>
+              <NavLink
+                className={styles.link}
+                activeClassName={styles.active}
+                to="/blog"
+                onClick={menuclose}
+              >
                 Blog
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" onClick={handleClick}>
+            <li className={styles.item}>
+              <NavLink
+                className={styles.link}
+                activeClassName={styles.active}
+                to="/contact"
+                onClick={menuclose}
+              >
                 Contact
               </NavLink>
             </li>

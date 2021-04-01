@@ -1,0 +1,25 @@
+@import "variables";
+
+.title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $font-family-montserrat;
+  h1 {
+    font-family: $font-family-montserrat;
+  }
+  .line {
+    width: 75px;
+    height: 1px;
+    background-color: $theme-primary-300;
+    margin-top: 30px;
+  }
+  p {
+    font-family: $font-family-montserrat;
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
