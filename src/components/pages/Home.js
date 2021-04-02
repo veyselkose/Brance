@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "../HeroSection";
 import Navtabs from "../Navtabs";
 import WhatWeDo from "../WhatWeDo";
+import MeOurTeam from "../MeOurTeam";
 function Home() {
   const data = [
     {
@@ -77,6 +78,8 @@ function Home() {
         <Navtabs col="3" loadMore="off" data={data} />
         <WhatWeDo />
       </div>
+      <MeOurTeam/>
+      
     </>
   );
 }

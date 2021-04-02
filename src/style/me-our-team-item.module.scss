@@ -1,0 +1,56 @@
+@import "variables";
+.item {
+  background-color: #fff;
+  display: flex;
+  margin: 15px;
+  &.col {
+    width: 45%;
+  }
+  img {
+    height: 200px;
+    flex: 2;
+    object-fit: cover;
+  }
+  .content {
+    flex: 3;
+    padding: 0 15px !important;
+    margin-top: auto;
+    margin-bottom: auto;
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: $theme-text-color;
+    }
+    .alt {
+      margin-top: 6px;
+      color: #999999;
+      font-size: 15px;
+    }
+    .desc {
+      margin-top: 10px;
+      font-size: 15px;
+      color: $theme-text-color;
+    }
+    .socialMedia {
+      margin-top: 15px;
+      svg {
+        &:not(:first-child) {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  img {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .col {
+    width: 100% !important;
+    margin: 15px 0 !important;
+  }
+}

@@ -1,0 +1,13 @@
+@import "variables";
+
+.MeOurTeam{
+    background-color:$theme-white-200;
+    padding: 92px 0;
+   .grid{
+       margin-top: 70px;
+       padding: 15px 0px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+}
