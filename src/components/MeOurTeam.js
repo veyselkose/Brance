@@ -11,10 +11,10 @@ function MeOurTeam() {
           shortDesc="Look at all of our recent work. To each his project, we pay special attention."
         />
         <div className={styles.grid}>
-        <MeOurTeamItem col name="Jason Roy" alt="Software Developer" imgsrc="/images/profile-1.jpg"/>
-        <MeOurTeamItem col name="Alea Smith" alt="Creative Lead" imgsrc="/images/profile-2.jpg"/>
-        <MeOurTeamItem col name="Monica Albert" alt="Graphic Designer" imgsrc="/images/profile-3.jpg"/>
-        <MeOurTeamItem col name="Jessica Stone" alt="IOS Developer" imgsrc="/images/profile-4.jpg"/>
+        <MeOurTeamItem  name="Jason Roy" alt="Software Developer" imgsrc="/images/profile-1.jpg"/>
+        <MeOurTeamItem  reverse name="Alea Smith" alt="Creative Lead" imgsrc="/images/profile-2.jpg"/>
+        <MeOurTeamItem  name="Monica Albert" alt="Graphic Designer" imgsrc="/images/profile-3.jpg"/>
+        <MeOurTeamItem  reverse name="Jessica Stone" alt="IOS Developer" imgsrc="/images/profile-4.jpg"/>
         </div>
       </div>
     </section>

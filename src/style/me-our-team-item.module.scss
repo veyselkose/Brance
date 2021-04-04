@@ -3,9 +3,10 @@
   background-color: #fff;
   display: flex;
   height: 220px;
+  width: 45%;
   margin: 15px;
-  &.col {
-    width: 45%;
+  &.reverse{
+    flex-direction: row-reverse;
   }
   .image {
     height: 100%;
@@ -50,7 +51,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .col {
+  .item {
     width: 100% !important;
     margin: 15px 0 !important;
   }

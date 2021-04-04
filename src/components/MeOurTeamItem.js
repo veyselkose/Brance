@@ -4,7 +4,7 @@ import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 function MeOurTeamItem(props) {
   return (
-    <div className={props.col ? `${styles.item} ${styles.col}` :` ${styles.item}`} >
+    <div className={props.reverse ? `${styles.item} ${styles.reverse}` :` ${styles.item}`} >
       <img src={props.imgsrc} alt="avatar" className={styles.image}/>
       <div className={styles.content}>
         <h5 className={styles.title}>{props.name}</h5>
