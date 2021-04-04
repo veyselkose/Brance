@@ -5,7 +5,7 @@ import { IconContext } from "react-icons/lib";
 function MeOurTeamItem(props) {
   return (
     <div className={props.col ? `${styles.item} ${styles.col}` :` ${styles.item}`} >
-      <img src={props.imgsrc} alt="avatar" />
+      <img src={props.imgsrc} alt="avatar" className={styles.image}/>
       <div className={styles.content}>
         <h5 className={styles.title}>{props.name}</h5>
         <span className={styles.alt}>{props.alt}</span>

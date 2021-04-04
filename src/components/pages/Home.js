@@ -3,6 +3,10 @@ import HeroSection from "../HeroSection";
 import Navtabs from "../Navtabs";
 import WhatWeDo from "../WhatWeDo";
 import MeOurTeam from "../MeOurTeam";
+import Testimonials from "../Testimonials";
+import FreeQuote from "../FreeQuote";
+import Newsletter from "../Newsletter";
+
 function Home() {
   const data = [
     {
@@ -73,13 +77,21 @@ function Home() {
           title="Hello, I'm"
           coloredtitle="John Smith"
           width700
-          text={"Te iisque labitur eos, nec sale argumentum scribentur no,\naugue disputando in vim. Erat fugit sit at, ius lorem deserunt deterruisset no."}
+          text={
+            "Te iisque labitur eos, nec sale argumentum scribentur no,\naugue disputando in vim. Erat fugit sit at, ius lorem deserunt deterruisset no."
+          }
         />
         <Navtabs col="3" loadMore="off" data={data} />
         <WhatWeDo />
       </div>
-      <MeOurTeam/>
-      
+      <MeOurTeam />
+      <div className="container">
+        <Testimonials />
+      </div>
+      <FreeQuote />
+      <div className="container">
+        <Newsletter />
+      </div>
     </>
   );
 }

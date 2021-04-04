@@ -1,0 +1,77 @@
+@import "variables";
+.freequote {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+
+  background-color: $theme-white-100;
+  .image {
+    height: 500px;
+    width: 50%;
+    object-fit: cover;
+  }
+  .content {
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 100px;
+    padding-right: 15px;
+    .title {
+      font-family: $font-family-montserrat;
+      font-size: 28px;
+      .colorized {
+        color: $theme-primary-300;
+      }
+    }
+    .desc {
+      font-family: $font-family-montserrat;
+      margin-top: 35px;
+      max-width: 500px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    .readmore {
+      font-family: $font-family-montserrat;
+      display: flex;
+      margin-top: 20px;
+      font-size: 18px;
+      color: $theme-primary-100;
+      text-decoration: none;
+      align-items: center;
+      svg {
+        margin-left: 15px;
+      }
+      &:hover {
+        color: $theme-primary-300;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .freequote {
+    .image {
+      height: 300px !important;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .freequote {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+    }
+    .content {
+      padding: 0;
+      width: 100%;
+      padding: 15px;
+      margin-top: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      // text-align: center;
+      .desc {
+        max-width: 100%;
+      }
+    }
+  }
+}
