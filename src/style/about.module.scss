@@ -1,0 +1,118 @@
+@import "variables";
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+  .faq,
+  .skills {
+    width: 49%;
+  }
+}
+.contact {
+  padding: 70px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    font-weight: 500;
+    font-size: 30px;
+    font-family: $font-family-montserrat;
+  }
+  p {
+    margin-top: 25px;
+    font-family: $font-family-montserrat;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
+.detailed {
+  margin-bottom: 50px;
+  .detailedConteiner {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    .detailedItem {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% / 3.5);
+      .detailedTitle {
+        font-size: 17px;
+        font-weight: 500;
+        .colorized {
+          color: $theme-gray;
+        }
+      }
+      .detailedDate {
+        margin-top: 8px;
+        color: $theme-primary-100;
+      }
+      .detailedDesc {
+        margin-top: 8px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.recentWorks {
+  .recentWorksConteiner {
+    margin: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .recentWorksItem {
+      width: calc(100% / 4.5);
+      margin-top: 15px;
+    }
+  }
+}
+.seemore {
+  font-family: $font-family-montserrat;
+  display: flex;
+  font-size: 18px;
+  color: $theme-primary-100;
+  text-decoration: none;
+  align-items: center;
+  svg {
+    margin-left: 15px;
+  }
+}
+.infos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+  .infolabel {
+    width: calc(100% / 5);
+    margin-top: 30px;
+    color: $theme-primary-300;
+    .info {
+      color: $theme-black;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .recentWorks {
+    .recentWorksConteiner {
+      .recentWorksItem {
+        width: 49%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .row {
+    flex-wrap: wrap;
+    .faq,
+    .skills {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  .infos {
+    .infolabel {
+      text-align: center;
+      width: calc(100% / 2);
+    }
+  }
+}

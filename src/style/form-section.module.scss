@@ -1,0 +1,44 @@
+@import "variables";
+.form {
+  background-color: $theme-white-200;
+  padding: 75px 135px;
+  margin-bottom: 200px;
+  .group {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+   
+    label {
+      font-size: 15px;
+    }
+    input,
+    textarea {
+      margin-top: 15px;
+      width: 100%;
+      border: 1px solid #e6e8eb;
+      border-radius: 2px;
+      background-color: #fff;
+      padding: 0 20px;
+      font-size: 15px;
+      min-height: 45px;
+    }
+    textarea {
+      padding: 20px;
+      margin-bottom:40px;
+      resize: vertical;
+    }
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    .group {
+      width: 49%;
+    }
+  }
+}
+@media screen and (max-width:768px) {
+    .form{
+        padding: 15px;
+    }
+    
+}

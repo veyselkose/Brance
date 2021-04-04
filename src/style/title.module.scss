@@ -7,6 +7,26 @@
   align-items: center;
   flex-direction: column;
   font-family: $font-family-montserrat;
+  &.row{
+    flex-direction: row;
+    justify-content: space-between;
+    p{
+      margin: 0;
+    }
+    h1{
+      padding-right: 15px;
+    }
+    .line{
+      margin: 0;
+      width: 100%;
+      background-color: #EFF1F4;
+    }
+  }
+  &.lineNone{
+   .line{
+     display: none;
+   }
+  }
   h1 {
     font-family: $font-family-montserrat;
   }

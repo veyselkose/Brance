@@ -1,0 +1,27 @@
+@import "variables";
+.skill {
+  margin-top: 30px;
+
+  .text {
+    display: flex;
+    font-size: 15px;
+    .title {
+      font-weight: 600;
+    }
+    .value {
+      margin-left: auto;
+    }
+  }
+  .line {
+    margin-top: 13px;
+    height: 2px;
+    background-color: #eff1f4;
+    width: 100%;
+    border-radius: 2px;
+    .linebar {
+      background-color: $theme-primary-300;
+      height: 100%;
+      border-radius: 2px;
+    }
+  }
+}
