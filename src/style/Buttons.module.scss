@@ -8,6 +8,7 @@
   outline: none;
   font-size: 18px;
   transition: 300ms all;
+  -webkit-appearance: button;
 }
 .btnOutline {
   @extend .btn;
@@ -28,24 +29,27 @@
   }
 }
 
-.circle{
-    @extend .btn;
-    height: 75px;
-    width: 75px;
-    border-radius: 50%;
-    color: $theme-primary-300;
-    &:hover {
-        background-color:  $theme-primary-200;
-        color: #fff;
-      }
-}
-.sharp{
-    @extend .btn;
-    border-radius: 0;
+.circle {
+  @extend .btn;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  color: $theme-primary-300;
+  font-family: $font-family-montserrat;
+  font-size: 48px;
+  font-weight: 100;
+  &:hover {
+    background-color: $theme-primary-200;
     color: #fff;
-    background-color: $theme-primary-300;
-    &:hover {
-        background-color: transparent;
-        color: $theme-primary-200;
-      }
+  }
+}
+.sharp {
+  @extend .btn;
+  border-radius: 0;
+  color: #fff;
+  background-color: $theme-primary-300;
+  &:hover {
+    background-color: transparent;
+    color: $theme-primary-200;
+  }
 }

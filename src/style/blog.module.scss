@@ -1,0 +1,26 @@
+@import "variables";
+body{
+    background-color: $theme-white-200;
+}
+.blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:100px 0;
+    .title{
+       
+    }
+    .grid{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+}
+@media screen and (max-width:576px) {
+    .blog{
+        margin:50px 0px;
+    }
+    
+}

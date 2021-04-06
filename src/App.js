@@ -6,6 +6,7 @@ import About from "./components/pages/About";
 import PortfolioTwo from "./components/pages/PortfolioTwo";
 import PortfolioThree from "./components/pages/PortfolioThree";
 import PortfolioFour from "./components/pages/PortfolioFour";
+import BlogPost from "./components/pages/BlogPost";
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/portfolio-two" component={PortfolioTwo} />
         <Route path="/portfolio-three" component={PortfolioThree} />
         <Route path="/portfolio-four" component={PortfolioFour} />
+        <Route path="/blog-post" component={BlogPost} />
         <Route path="/blog" component={Blog} />
         <Route path="/contact" component={Contact} />
       </Switch>

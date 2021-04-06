@@ -9,7 +9,8 @@ function Navbar() {
   const [Click, setClick] = useState(false);
   const menuclose = () => setClick(false);
   const handleClick = () => setClick(!Click);
-  const [Dropdown, setDropdown] = useState(false);
+  const [PortfolioDropdown, setPortfolioDropdown] = useState(false);
+  const [BlogDropdown, setBlogDropdown] = useState(false);
   return (
     <nav className={styles.navbar}>
       <div className={`container ${styles.container}`}>
@@ -49,20 +50,19 @@ function Navbar() {
             </li>
             <li
               className={
-                Dropdown ? `${styles.item} ${styles.collapsed}` : styles.item
+                PortfolioDropdown ? `${styles.item} ${styles.collapsed}` : styles.item
               }
-              onClick={() => setDropdown(!Dropdown)}
+              onClick={() => setPortfolioDropdown(!PortfolioDropdown)}
             >
-              <Link
+              <span
                 className={styles.link}
                 style={{ display: "flex", alignItems: "center" }}
-                to=""
               >
                 Portfolio
                 <IoIosArrowDown
                   style={{ marginLeft: "10px", marginTop: "px" }}
                 />
-              </Link>
+              </span>
               <ul className={styles.dropdown}>
                 <li className={styles.dropdownItem}>
                   <NavLink
@@ -96,15 +96,43 @@ function Navbar() {
                 </li>
               </ul>
             </li>
-            <li className={styles.item}>
-              <NavLink
+            <li
+              className={
+                BlogDropdown ? `${styles.item} ${styles.collapsed}` : styles.item
+              }
+              onClick={() => setBlogDropdown(!BlogDropdown)}
+            >
+              <span
                 className={styles.link}
-                activeClassName={styles.active}
-                to="/blog"
-                onClick={menuclose}
+                style={{ display: "flex", alignItems: "center" }}
               >
                 Blog
-              </NavLink>
+                <IoIosArrowDown
+                  style={{ marginLeft: "10px", marginTop: "px" }}
+                />
+              </span>
+              <ul className={styles.dropdown}>
+                <li className={styles.dropdownItem}>
+                  <NavLink
+                    activeClassName={styles.active}
+                    className={styles.dropdownLink}
+                    to="blog"
+                    onClick={menuclose}
+                  >
+                    Blog Page
+                  </NavLink>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <NavLink
+                    activeClassName={styles.active}
+                    className={styles.dropdownLink}
+                    to="blog-post"
+                    onClick={menuclose}
+                  >
+                    Blog Post Page
+                  </NavLink>
+                </li>
+              </ul>
             </li>
             <li className={styles.item}>
               <NavLink
