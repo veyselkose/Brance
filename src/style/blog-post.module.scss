@@ -1,0 +1,328 @@
+@import "variables";
+.BlogPost {
+  display: flex;
+  padding: 100px 0;
+  .main {
+    padding-right: 40px;
+    width: 66.6666666667%;
+    //hero
+    .postImage {
+      width: 100%;
+    }
+    .category,
+    .date,
+    .comment {
+      font-size: 15px;
+      display: inline-block;
+      margin-top: 25px;
+      position: relative;
+    }
+    .category {
+      color: $theme-primary-300;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 1px;
+        background-color: $theme-primary-300;
+        bottom: 8px;
+        right: -30px;
+      }
+    }
+    .date {
+      color: $theme-gray;
+      margin-left: 45px;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 15px;
+        height: 1px;
+        background-color: $theme-primary-300;
+        bottom: 8px;
+        right: -30px;
+      }
+    }
+    .comment {
+      color: $theme-gray;
+      margin-left: 45px;
+    }
+    .title {
+      margin-top: 18px;
+      font-weight: 400;
+      font-family: $font-family-montserrat;
+    }
+    //hero
+    //content
+    .content {
+      margin: 26px 0;
+      .paragraph {
+        font-size: 18px;
+        line-height: 35px;
+      }
+      blockquote {
+        padding: 55px 45px;
+        font-style: italic;
+        line-height: 47px;
+        border-left: 2px solid $theme-primary-100;
+        background-color: $theme-white-200;
+        cite {
+          display: block;
+          font-weight: 600;
+        }
+      }
+    }
+    //content
+    //userCard
+    .userCard {
+      background-color: rgba(247, 249, 251, 0.5);
+      display: flex;
+      align-items: center;
+      .col {
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .userCardImage {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .socialMedia {
+          margin-top: 18px;
+          svg {
+            &:not(:first-child) {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+      .text {
+        padding-right: 40px;
+        .cardName {
+          font-weight: 600;
+        }
+        .cardDesc {
+          margin-top: 17px;
+          font-size: 15px;
+        }
+      }
+    }
+    //userCard
+    //commentSection
+    .commentSection {
+      margin-top: 40px;
+      .commentTitle {
+        font-weight: 500;
+      }
+      .commentItem {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+        border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+        .user {
+          display: flex;
+          align-items: center;
+          .commentItemAvatar {
+            width: 66px;
+            height: 66px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+          .texts {
+            margin-left: 17px;
+            .commentUserName {
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .commentDate {
+              margin-top: 8px;
+              font-size: 15px;
+              color: $theme-gray;
+            }
+          }
+        }
+        .commentContent {
+          margin-top: 20px;
+          font-size: 15px;
+          line-height: 33px;
+        }
+      }
+    }
+    //commentSection
+    //commentInput
+    .commentInput {
+      margin-top: 35px;
+      .commentInputTitle {
+        font-weight: 500;
+      }
+      .group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        label {
+          font-size: 15px;
+        }
+        input,
+        textarea {
+          -webkit-appearance: none;
+          margin-top: 15px;
+          width: 100%;
+          border: 1px solid #e6e8eb;
+          border-radius: 2px;
+          background-color: #fff;
+          padding: 0 20px;
+          font-size: 15px;
+          min-height: 45px;
+        }
+        textarea {
+          padding: 20px;
+          margin-bottom: 40px;
+          resize: vertical;
+        }
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        .group {
+          width: 49%;
+        }
+      }
+    }
+    //commentInput
+  }
+  .side {
+    display: flex;
+    padding-left: 40px;
+    width: 33.3333333333%;
+    flex-direction: column;
+    .sideTitle {
+      font-weight: 500;
+      font-size: 20px;
+      margin-top: 30px;
+      font-family: $font-family-montserrat;
+    }
+    .searchForm {
+      .search {
+        -webkit-appearance: none;
+        width: 100%;
+        border: 1px solid #e6e8eb;
+        border-radius: 2px;
+        background-color: #fff;
+        padding: 0 20px;
+        font-size: 15px;
+        min-height: 40px;
+      }
+    }
+    .recentSection {
+      .recentPost {
+        display: flex;
+        align-items: center;
+        padding: 25px 0;
+        border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+        .recentPostImage {
+          height: 80px;
+          width: 80px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        .recentTexts {
+          width: calc(100% - 95px);
+          margin-left: 15px;
+          .recentPostTitle {
+            font-size: 18px;
+            display: block;
+          }
+          .recentDate,
+          .recentComment {
+            font-size: 15px;
+            display: inline-block;
+            margin-top: 10px;
+            color: $theme-gray;
+          }
+          .recentDate {
+            position: relative;
+            &::after {
+              position: absolute;
+              content: "";
+              width: 15px;
+              height: 1px;
+              background-color: $theme-primary-300;
+              bottom: 8px;
+              right: -30px;
+            }
+          }
+          .recentComment {
+            margin-left: 45px;
+          }
+        }
+      }
+    }
+    .categorySection {
+      margin-top: 25px;
+      .categoryLink {
+        color: #484848;
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(187, 187, 187, 0.2);
+        svg {
+          margin-left: auto;
+        }
+      }
+    }
+    .tags {
+      margin-top: 15px;
+      display: flex;
+      margin-left: -9px;
+      flex-wrap: wrap;
+      .badge {
+        display: inline-block;
+        padding: 5px 14px;
+        color: #484848;
+        border-radius: 2px;
+        background-color: rgba(239, 241, 244, 0.5);
+        font-size: 15px;
+        margin-top: 10px;
+        margin-left: 9px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .BlogPost {
+    .side {
+      padding: 0;
+    }
+    .main {
+      .userCard {
+        padding: 20px 0;
+        .col {
+          padding: 20px;
+        }
+        .text {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .BlogPost {
+    flex-direction: column;
+    padding: 50px 0;
+    .main,
+    .side {
+      width: 100%;
+      padding: 0;
+    }
+    .main {
+    }
+    .side {
+      margin-top: 30px;
+    }
+  }
+}
