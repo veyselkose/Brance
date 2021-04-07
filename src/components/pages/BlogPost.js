@@ -11,7 +11,7 @@ function BlogPost() {
       <section className={styles.BlogPost}>
         <main className={styles.main}>
           <img
-            src="images/BlogPost-3.jpg"
+            src="images/blogPost-3.jpg"
             alt="python book"
             className={styles.postImage}
           />
