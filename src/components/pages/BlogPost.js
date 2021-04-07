@@ -8,7 +8,7 @@ import { BiChevronRight } from "react-icons/bi";
 function BlogPost() {
   return (
     <div className="container">
-      <section className={styles.BlogPost}>
+      <section className={styles.blogPost}>
         <main className={styles.main}>
           <img
             src="images/BlogPost-3.jpg"
