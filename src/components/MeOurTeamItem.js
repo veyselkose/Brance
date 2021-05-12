@@ -2,8 +2,10 @@ import React from "react";
 import styles from "../style/me-our-team-item.module.scss";
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import Roll from 'react-reveal/Roll';
 function MeOurTeamItem(props) {
   return (
+    <Roll left={props.reverse ? true :false} right={props.reverse ? false :true}>
     <div className={props.reverse ? `${styles.item} ${styles.reverse}` :` ${styles.item}`} >
       <img src={props.imgsrc} alt="avatar" className={styles.image}/>
       <div className={styles.content}>
@@ -21,6 +23,7 @@ function MeOurTeamItem(props) {
         </div>
       </div>
     </div>
+    </Roll>
   );
 }
 

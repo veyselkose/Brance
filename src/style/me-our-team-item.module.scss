@@ -5,6 +5,16 @@
   height: 220px;
   width: 45%;
   margin: 15px;
+  transition:1000ms all;
+  .title,.desc,.alt{
+    transition: 300ms color;
+  }
+  &:hover{
+    background-color:$theme-black;
+    .title,.desc,.alt{
+      color: #fff !important;
+    }
+  }
   &.reverse{
     flex-direction: row-reverse;
   }

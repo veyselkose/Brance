@@ -1,10 +1,14 @@
 import React from "react";
 import styles from "../style/free-quote.module.scss";
 import {BiRightArrowAlt} from "react-icons/bi"
+import LightSpeed from 'react-reveal/LightSpeed';
 function FreeQuote() {
   return (
     <section className={styles.freequote}>
+      <LightSpeed left>
       <img src="images/quote-image.jpg" alt="" className={styles.image} />
+      </LightSpeed>
+      <LightSpeed right>
       <div className={styles.content}>
         <h1 className={styles.title}>
           Would you like to get a{" "}
@@ -17,6 +21,7 @@ function FreeQuote() {
         </p>
         <a href="/" className={styles.readmore}>READ MORE <BiRightArrowAlt size={20}/> </a>
       </div>
+      </LightSpeed>
     </section>
   );
 }

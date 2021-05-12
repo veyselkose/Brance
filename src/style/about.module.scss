@@ -92,6 +92,18 @@
   }
 }
 @media screen and (max-width: 576px) {
+  .detailed {
+    .detailedConteiner {
+      flex-direction: column;
+      .detailedItem{
+        width: 100%;
+        &:not(:first-child)
+        {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
   .recentWorks {
     .recentWorksConteiner {
       .recentWorksItem {

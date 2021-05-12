@@ -6,7 +6,7 @@ import MeOurTeam from "../MeOurTeam";
 import Testimonials from "../Testimonials";
 import FreeQuote from "../FreeQuote";
 import Newsletter from "../Newsletter";
-
+import Pulse from "react-reveal/Pulse"
 function Home() {
   const data = [
     {
@@ -73,6 +73,7 @@ function Home() {
   return (
     <>
       <div className="container">
+        <Pulse>
         <HeroSection
           title="Hello, I'm"
           coloredtitle="John Smith"
@@ -81,6 +82,7 @@ function Home() {
             "Te iisque labitur eos, nec sale argumentum scribentur no,\naugue disputando in vim. Erat fugit sit at, ius lorem deserunt deterruisset no."
           }
         />
+        </Pulse>
         <Navtabs col="3" loadMore="off" data={data} />
         <WhatWeDo />
       </div>

@@ -79,15 +79,9 @@ function About() {
         <div className={styles.detailed}>
           <Title title="Education" row></Title>
           <div className={styles.detailedConteiner}>
-            <DetailedItem
-              title="ENGINEERING DEGREE"
-              colorized="OXFORD UNIVERSITY"
-            />
+            <DetailedItem title="ENGINEERING DEGREE" colorized="OXFORD UNIVERSITY" />
             <DetailedItem title="MASTER DEGREE" colorized="KIEV UNIVERSITY" />
-            <DetailedItem
-              title="BACHELOR DEGREE"
-              colorized="TUNIS HIGH SCHOOL"
-            />
+            <DetailedItem title="BACHELOR DEGREE" colorized="TUNIS HIGH SCHOOL" />
           </div>
         </div>
 
@@ -99,17 +93,20 @@ function About() {
           </Title>
           <div className={styles.recentWorksConteiner}>
             <img src="images/tabs-img3.jpg" alt="recent works" className={styles.recentWorksItem} />
-            <img src="images/tabs-img2.jpg" alt="recent works" className={styles.recentWorksItem}/>
-            <img src="images/tabs-img4.jpg" alt="recent works" className={styles.recentWorksItem}/>
-            <img src="images/tabs-img5.jpg" alt="recent works" className={styles.recentWorksItem}/>
+            <img src="images/tabs-img2.jpg" alt="recent works" className={styles.recentWorksItem} />
+            <img src="images/tabs-img4.jpg" alt="recent works" className={styles.recentWorksItem} />
+            <img src="images/tabs-img5.jpg" alt="recent works" className={styles.recentWorksItem} />
           </div>
         </div>
 
-      <div className={styles.contact}>
-        <h1>Join by April 27 and Win $200 in Programs and Services</h1>
-        <p>This is a simple hero unit, a simple call-to-action-style component for calling extra attention to featured content.</p>
-        <button className={Buttons.btnFill}>CONTACT US</button>
-      </div>
+        <div className={styles.contact}>
+          <h1>Join by April 27 and Win $200 in Programs and Services</h1>
+          <p>
+            This is a simple hero unit, a simple call-to-action-style component for calling extra
+            attention to featured content.
+          </p>
+          <button className={Buttons.btnFill}>CONTACT US</button>
+        </div>
       </div>
     </>
   );
@@ -121,13 +118,12 @@ function DetailedItem(props) {
   return (
     <div className={styles.detailedItem}>
       <span className={styles.detailedTitle}>
-        {props.title} -{" "}
-        <span className={styles.colorized}>{props.colorized}</span>
+        {props.title} - <span className={styles.colorized}>{props.colorized}</span>
       </span>
       <span className={styles.detailedDate}>2018 - 2020</span>
       <span className={styles.detailedDesc}>
-        Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore
-        adipisicing elit.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sint, impedit culpa saepe
+        dignissimos voluptates?
       </span>
     </div>
   );

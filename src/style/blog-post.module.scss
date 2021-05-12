@@ -292,6 +292,17 @@
     }
   }
 }
+@media screen and (min-width:992px)
+{
+  .blogPost{
+    .side{
+      .sideContent{
+        position: sticky;
+        top: 15px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1200px) {
   .blogPost {
     .side {
